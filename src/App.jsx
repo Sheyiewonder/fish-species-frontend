@@ -38,7 +38,7 @@ import { useEffect, useState } from "react";
 import UploadBox from "./components/uploadBox";
 import Result from "./components/result";
 import Footer from "./components/footer";
-import logo from "./assets/IMG_9394";
+import logo from "./assets/IMG_9394.jpeg";
 const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
