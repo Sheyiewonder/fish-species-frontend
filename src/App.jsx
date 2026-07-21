@@ -59,12 +59,14 @@ function App() {
 
         const formData = new FormData();
         formData.append("file", image);
-
-        const response = await fetch(`${API_URL}/predict`, {
-          method: "POST",
-          body: formData,
-        });
-
+        
+const response = await fetch(
+  `${import.meta.env.VITE_API_URL}/predict`,
+  {
+    method: "POST",
+    body: formData,
+  }
+);
         if (!response.ok) {
           throw new Error("Prediction failed.");
         }
