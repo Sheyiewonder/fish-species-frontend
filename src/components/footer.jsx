@@ -7,7 +7,7 @@ function Footer() {
       <img
         src={profile}
         alt="Developer"
-        className="w-24 h-24 rounded-full border-4 border-blue-500 object-cover mx-auto mb-4 shadow-lg"
+        className="w-38 h-38 object-cover rounded-2xl border-4 border-blue-500 shadow-md"
       />
 
       <p className="font-medium">
@@ -15,8 +15,12 @@ function Footer() {
       </p>
 
       <p>
-        Falodun Eniola Grace (FAT/20/4424)
+        Falodun Eniola Grace
       </p>
+      <p>
+      (FAT/20/4424)
+      </p>
+    
 
     </footer>
   );
