@@ -38,6 +38,7 @@ import { useEffect, useState } from "react";
 import UploadBox from "./components/uploadBox";
 import Result from "./components/result";
 import Footer from "./components/footer";
+import logo from "./assets/IMG_9394";
 const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
@@ -106,6 +107,11 @@ const response = await fetch(
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 px-4 py-16">
+      <img
+    src={logo}
+    alt="Fish Species Identifier"
+    className="w-32 h-32 object-cover rounded-2xl border-4 border-blue-500 shadow-lg mb-6"
+/>
 
       <h1 className="text-5xl font-bold text-blue-700 mb-10">
         Fish Species Identifier
