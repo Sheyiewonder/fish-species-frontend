@@ -35,7 +35,7 @@
 // export default App; 
 
 import { useEffect, useState } from "react";
-import UploadBox from "./components/UploadBox";
+import UploadBox from "./components/uploadBox";
 import Result from "./components/Result";
 import Footer from "./components/Footer";
 const API_URL = import.meta.env.VITE_API_URL;
