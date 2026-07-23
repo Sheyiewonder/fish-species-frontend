@@ -6,6 +6,7 @@ import {
   Utensils,
   Ruler,
   BrainCircuit,
+  BadgeCheck,
 } from "lucide-react";
 
 import ConfidenceRing from "./ConfidenceRing";
