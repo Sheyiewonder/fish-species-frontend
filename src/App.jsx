@@ -225,7 +225,7 @@ function App() {
             className="text-amber-600 flex-shrink-0"
           />
 
-          <h2 className="text-md font-bold text-amber-900 leading-relaxed">
+          <h2 className="text-lg font-bold text-amber-900 leading-relaxed">
             For Best Results
           </h2>
 
