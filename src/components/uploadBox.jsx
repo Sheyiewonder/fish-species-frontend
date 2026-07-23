@@ -3,6 +3,7 @@ import {
   Upload,
   Camera,
   CameraIcon,
+  Fish,
 } from "lucide-react";
 
 function UploadBox({ image, setImage, loading }) {
@@ -26,6 +27,7 @@ function UploadBox({ image, setImage, loading }) {
 
         const allowedTypes = [
         "image/jpeg",
+        "image/jpg",
         "image/png",
         "image/webp",
         ];
@@ -110,82 +112,172 @@ function UploadBox({ image, setImage, loading }) {
 
   return (
     <>
-      <div className="w-full max-w-md border-2 border-dashed border-blue-300 rounded-2xl p-6 bg-white shadow-xl">
+      <div className="
+            w-full
+            max-w-4xl
+            mx-auto
+            rounded-3xl
+            bg-white/90
+            backdrop-blur-xl
+            border
+            border-slate-200
+            shadow-2xl
+            p-6
+            sm:p-8
+            "
+      >
 
-        {/* Preview */}
-        {image && !cameraOn && (
-          <img
-            src={image}
-            alt="Fish Preview"
-            className="w-full h-64 object-contain rounded-lg mb-6"
-          />
-        )}
+        {/* Preview Area */}
 
-        {/* Camera */}
-        {cameraOn && (
-          <>
-            <video
-              ref={videoRef}
-              autoPlay
-              playsInline
-              className="w-full rounded-lg mb-6"
-            />
-
-            <div className="flex gap-4">
-
-              <button
-                onClick={captureImage}
-                className="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg transition"
-              >
-                <CameraIcon size={18} />
-                Capture
-              </button>
-
-              <button
-                onClick={stopCamera}
-                className="flex-1 bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg transition"
-              >
-                Cancel
-              </button>
-
-            </div>
-          </>
-        )}
-
-        {/* Upload Buttons */}
         {!cameraOn && (
-          <div className="flex flex-col gap-4">
 
-            <button
-                onClick={openFilePicker}
-                disabled={loading}
-                className={`flex items-center justify-center gap-2 py-3 rounded-lg transition ${
-                    loading
-                    ? "bg-gray-400 cursor-not-allowed text-white"
-                    : "bg-blue-600 hover:bg-blue-700 text-white"
-                }`}
-            >
+        <div
+        className="
+        mb-8
+        rounded-2xl
+        bg-gradient-to-br
+        from-slate-50
+        to-cyan-50
+        border
+        border-slate-200
+        overflow-hidden
+        "
+        >
 
-              <Upload size={20} />
-              Upload from Device
-            </button>
+        {image ? (
 
-            <button
-                onClick={openCamera}
-                disabled={loading}
-                className={`flex items-center justify-center gap-2 py-3 rounded-lg transition ${
-                    loading
-                    ? "bg-gray-400 cursor-not-allowed text-white"
-                    : "bg-green-600 hover:bg-green-700 text-white"
-                }`}
-            >
+        <img
+        src={image}
+        alt="Fish Preview"
+        className="
+        w-full
+        aspect-video
+        object-cover
+        "
+        />
 
-              <Camera size={20} />
-              Take Photo
-            </button>
+        ) : (
 
-          </div>
+        <div
+        className="
+        aspect-video
+        flex
+        flex-col
+        items-center
+        justify-center
+        px-6
+        text-center
+        "
+        >
+
+        <Fish
+        size={58}
+        className="text-cyan-500 mb-5"
+        />
+
+        <h3 className="text-2xl font-bold text-slate-800">
+
+        Upload a Fish Image
+
+        </h3>
+
+        <p className="mt-3 text-slate-500">
+
+        This AI model will identify the species and explain
+        why it made the prediction.
+
+        </p>
+
+        <p className="mt-4 text-sm text-slate-400">
+
+        JPG • PNG • WEBP • Max 10 MB
+
+        </p>
+
+        </div>
+
         )}
+
+        </div>
+
+        )}
+        <div className="flex flex-col gap-4">
+
+          <button
+          onClick={openFilePicker}
+          disabled={loading}
+          className={`
+          group
+          flex
+          items-center
+          justify-center
+          gap-3
+          rounded-xl
+          py-4
+          font-semibold
+          transition-all
+          duration-300
+          shadow-md
+          hover:shadow-xl
+          hover:-translate-y-1
+          ${
+          loading
+          ?
+          "bg-slate-400 text-white cursor-not-allowed"
+          :
+          "bg-gradient-to-r from-blue-600 to-cyan-500 text-white"
+          }
+          `}
+          >
+
+          <Upload size={20}/>
+
+          {image
+          ?
+          "Upload Another"
+          :
+          "Upload from Device"}
+
+          </button>
+
+          <button
+          onClick={openCamera}
+          disabled={loading}
+          className={`
+          group
+          flex
+          items-center
+          justify-center
+          gap-3
+          rounded-xl
+          py-4
+          font-semibold
+          transition-all
+          duration-300
+          shadow-md
+          hover:shadow-xl
+          hover:-translate-y-1
+          ${
+          loading
+          ?
+          "bg-slate-400 text-white cursor-not-allowed"
+          :
+          "bg-gradient-to-r from-emerald-600 to-green-500 text-white"
+          }
+          `}
+          >
+
+          <Camera size={20}/>
+
+          {image
+          ?
+          "Take Another"
+          :
+          "Take Photo"}
+
+          </button>
+
+        </div>
 
       </div>
 
