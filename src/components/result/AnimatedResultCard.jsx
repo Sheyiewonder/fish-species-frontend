@@ -111,18 +111,22 @@ function AnimatedResultCard({ prediction }) {
                 }}
 
                 className="
-                    pt-5
-                    text-xs
-                    uppercase
-                    tracking-[0.35em]
-                    font-semibold
-                    text-slate-500
-                    text-center
-                "
+            text-[10px]
+            sm:text-xs
+            uppercase
+            tracking-[0.2em]
+            font-semibold
+            text-slate-500
+        "
 
             >
 
-                AI Classification Complete ✓
+                AI Classification Complete 
+              
+                <BadgeCheck
+                  size={16}
+                  className="text-emerald-500"
+                  />
 
             </motion.h3>
 
