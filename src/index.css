@@ -1,7 +1,14 @@
 @import "tailwindcss";
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f7f6;
+body{
+    font-family:"Poppins",sans-serif;
 }
+
+/* Background:      #F8FAFC
+Card:            rgba(255,255,255,.75)
+Primary:         #2563EB
+Accent:          #06B6D4
+Success:         #10B981
+Text:            #0F172A
+Secondary Text:  #64748B
+Border:          rgba(255,255,255,.35) */
