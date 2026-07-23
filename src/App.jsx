@@ -225,7 +225,7 @@ function App() {
             className="text-amber-600 flex-shrink-0"
           />
 
-          <h2 className="text-xl font-bold text-amber-900 leading-relaxed">
+          <h2 className="text-md font-bold text-amber-900 leading-relaxed">
             For Best Results
           </h2>
 
@@ -240,7 +240,7 @@ function App() {
               className="text-green-600 flex-shrink-0"
             />
 
-            <p className="text-slate-700 leading-relaxed">
+            <p className="text-slate-700 text-sm leading-relaxed">
               Ensure the image contains only <strong>one fish.</strong>
             </p>
 
@@ -253,7 +253,7 @@ function App() {
               className="text-green-600 flex-shrink-0"
             />
 
-            <p className="text-slate-700 leading-relaxed">
+            <p className="text-slate-700 text-sm leading-relaxed">
               Ensure the fish is <strong>clearly visible.</strong>
             </p>
 
