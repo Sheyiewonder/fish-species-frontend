@@ -186,20 +186,7 @@ function App() {
     </div>
   
 
-  <h1 className="text-5xl font-extrabold text-center text-slate-800">
-
-      Fish Species Identifier
-
-  </h1>
-
-  <p className="mt-4 text-center text-slate-500 text-lg max-w-2xl">
-
-      AI-powered Fish Species Recognition using
-      Deep Learning
-
-  </p>
-
-      <h1 className="text-5xl font-bold text-center text-blue-500 mb-10">
+<h1 className="text-5xl font-bold text-center text-blue-500 mb-10">
         Fish Species Identifier
       </h1>
 
