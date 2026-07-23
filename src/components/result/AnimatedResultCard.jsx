@@ -112,7 +112,7 @@ function AnimatedResultCard({ prediction }) {
 
                 className="
                     pt-5
-                    text-sm
+                    text-xs
                     uppercase
                     tracking-[0.35em]
                     font-semibold
