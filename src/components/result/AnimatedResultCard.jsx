@@ -6,7 +6,6 @@ import {
   Utensils,
   Ruler,
   BrainCircuit,
-  BadgeCheck,
 } from "lucide-react";
 
 import ConfidenceRing from "./ConfidenceRing";
@@ -122,12 +121,7 @@ function AnimatedResultCard({ prediction }) {
 
             >
 
-                AI Classification Complete 
-              
-                <BadgeCheck
-                  size={16}
-                  className="text-emerald-500"
-                  />
+                AI Classification Complete ✓
 
             </motion.h3>
 
