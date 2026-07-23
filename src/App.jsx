@@ -61,23 +61,21 @@ function App() {
         const formData = new FormData();
         formData.append("file", image);
         
-const response = await fetch(
-  `${import.meta.env.VITE_API_URL}/predict`,
-  {
-    method: "POST",
-    body: formData,
-  }
-);
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/predict`,
+          {
+            method: "POST",
+            body: formData,
+          }
+        );
         if (!response.ok) {
           throw new Error("Prediction failed.");
         }
 
         const data = await response.json();
 
-        setPrediction({
-          species: data.species,
-          accuracy: data.accuracy,
-        });
+        setPrediction(data);
+
       } catch (error) {
         console.error("Prediction Error:", error);
 
